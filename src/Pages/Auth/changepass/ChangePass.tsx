@@ -91,7 +91,7 @@ function sendData(data: any) {
     
      
     </div>
-        <Button onClick={()=>{navgate("")}} className=" w-full  my-4" type="submit" >Submit</Button>
+        <Button onClick={()=>{navgate("/home")}} className=" w-full  my-4" type="submit" >Submit</Button>
         <div className="  flex justify-between "> 
        
     </div>
