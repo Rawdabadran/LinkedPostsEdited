@@ -1,6 +1,6 @@
 import {  useContext, useState } from "react"
 
-import {  Link, Navigate } from "react-router-dom";
+import {  Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Contaxt/AuthContext";
 import { UserContext } from "../../../Contaxt/UserContext";
 import { useQueryClient } from "@tanstack/react-query";
@@ -24,6 +24,7 @@ const {name,username,email,photo} = (userData ?? {}) as {
 };
 
  
+const navgate= useNavigate()
 
  let OUT = useContext(AuthContext);
  if(!OUT)
@@ -37,7 +38,7 @@ const {name,username,email,photo} = (userData ?? {}) as {
 
  function logOut(){
   localStorage.removeItem("token");
-  <Navigate to ={''}/>;
+  navgate("")
    setToken(null);
    query.removeQueries({queryKey:["userdata"]})
 

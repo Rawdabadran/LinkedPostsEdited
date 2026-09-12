@@ -11,12 +11,12 @@ import { baseUrl } from "../../../Components/ProjectApi/Api";
 import { useContext } from "react";
 import { AuthContext } from "../../../Contaxt/AuthContext";
 import { useMutation } from "@tanstack/react-query";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function ChangePass() {
 
 
-  
+   const navgate =useNavigate()
 
      const auth  =useContext(AuthContext)
      if(!auth)
@@ -91,7 +91,7 @@ function sendData(data: any) {
     
      
     </div>
-        <Button className=" w-full  my-4" type="submit" >Submit</Button>
+        <Button onClick={()=>{navgate("")}} className=" w-full  my-4" type="submit" >Submit</Button>
         <div className="  flex justify-between "> 
        
     </div>
