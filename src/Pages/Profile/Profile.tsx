@@ -191,7 +191,7 @@ function sendFile(e: any) {
                       />
                      
                     </div>
-                     <MdModeEditOutline onClick={()=>{fileInput.current?.click()}} className="z-50    xl:top-2/3 xl:right-1/4   md:-mt-5  md:right-1/2  right-1/4  absolute border-2 text-sky-800 border-sky-500 rounded-full bg-white  text-2xl " />
+                     <MdModeEditOutline onClick={()=>{fileInput.current?.click()}} className="z-50    lg:top-2/3 lg:right-0.5  md:-mt-5  md:right-1/2  right-1/4  absolute border-2 text-sky-800 border-sky-500 rounded-full bg-white  text-2xl " />
                     
                   </div>
                     <input onChange={(e)=>{sendFile(e)}} 
