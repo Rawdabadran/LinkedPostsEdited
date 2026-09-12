@@ -17,6 +17,7 @@ import type { LoginInterFace } from "../../../interFaces/login"
 
 export default function Login() {
   let Navegate =useNavigate();
+  const navegate=useNavigate()
 
   // const [passWord, sendPass] = useState<string | null>(null)
 
@@ -90,7 +91,7 @@ let  {setToken}=auth;
     <Button className=" w-full  my-4" type="submit" >Submit</Button>
     <div className="  flex justify-between "> 
     <span className=" text-start text-xs text-stone-400"> Don't have an account </span>
-<Link href="/Register" className="text-sky-900"> sign up  </Link>
+<span onClick={()=>{navegate("/Register")}} className="text-sky-900">sign up</span>
 </div>
 
  <div  className= {` flex justify-center `} > 
