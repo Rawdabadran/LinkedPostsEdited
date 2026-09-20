@@ -15,7 +15,7 @@ export const custmValidationEScema =z.object({
    return age>=20
    
   },"You Are too young"),
-  password:z.string().nonempty("Password is required").regex(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,"enter a vaild password"),
+  password:z.string().nonempty("Password is required").regex(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,"Use 8+ characters with uppercase, lowercase, a number, and a symbol."),
   rePassword:z.string().nonempty("confirm password is required")
 }).refine((userData)=> userData.password==userData.rePassword,{
 message:"Password and rePassword not match",
